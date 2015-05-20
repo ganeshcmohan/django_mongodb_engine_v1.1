@@ -217,7 +217,6 @@ class DatabaseWrapper(NonrelDatabaseWrapper):
         user = pop('USER')
         password = pop('PASSWORD')
         options = pop('OPTIONS', {})
-        print host,port,user,password,db_name
         self.operation_flags = options.pop('OPERATIONS', {})
         if not any(k in ['save', 'delete', 'update']
                    for k in self.operation_flags):
